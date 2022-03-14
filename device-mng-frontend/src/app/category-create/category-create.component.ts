@@ -10,6 +10,7 @@ import { CategoryService } from '../category/category.service';
 })
 export class CategoryCreateComponent implements OnInit {
   category = <Category>{};
+  submitted = false;
 
   constructor(
     private router: Router,
@@ -20,6 +21,7 @@ export class CategoryCreateComponent implements OnInit {
   }
 
   save(): void {
+    this.submitted = true;
     this.categoryService.save(this.category)
       .subscribe(category => this.router.navigate(['categories']));
   }

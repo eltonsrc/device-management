@@ -16,7 +16,7 @@
         </div>
         <div class="form-group">
             <label for="device-color">Color: </label>
-            <input id="device-color" type="text" required class="form-control" maxlength="16" [(ngModel)]="device.color" name="color" placeholder="color" #color="ngModel">
+            <input id="device-color" type="text" required pattern="^(?!\s*$).+" class="form-control" maxlength="16" [(ngModel)]="device.color" name="color" placeholder="color" #color="ngModel">
             <div [hidden]="color.valid || color.pristine"
                 class="alert alert-danger">
                 Color is required
