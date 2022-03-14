@@ -13,6 +13,7 @@ import { DeviceService } from '../device/device.service';
 export class DeviceCreateComponent implements OnInit {
   categories?: Category[];
   device = <Device> {};
+  submitted = false;
 
   constructor(
     private router: Router,
@@ -30,6 +31,7 @@ export class DeviceCreateComponent implements OnInit {
   }
 
   save(): void {
+    this.submitted = true;
     this.deviceService.save(this.device)
       .subscribe(device => this.router.navigate(['devices']));
   }
