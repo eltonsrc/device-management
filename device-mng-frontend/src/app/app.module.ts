@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { CategoryComponent } from './category/category.component';
 import { DeviceComponent } from './device/device.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CategoryShowComponent } from './category-show/category-show.component';
+import { CategoryCreateComponent } from './category-create/category-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoryComponent,
-    DeviceComponent
+    DeviceComponent,
+    CategoryShowComponent,
+    CategoryCreateComponent
   ],
   imports: [
     BrowserModule,

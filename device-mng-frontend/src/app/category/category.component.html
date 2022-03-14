@@ -1,17 +1,9 @@
 <h2>Categories</h2>
+<a class="button" routerLink="/category">New</a>
 <ul class="list">
   <li *ngFor="let category of categories">
-    <button [class.selected]="category === selectedCategory" type="button" (click)="onSelect(category)">
+    <a routerLink="/category/{{category.id}}">
         <span class="badge">{{category.id}}</span> {{category.name}}
-    </button>
+    </a>
   </li>
 </ul>
-
-<div *ngIf="selectedCategory">
-    <h2>{{selectedCategory.name | uppercase}} Details</h2>
-    <div>id: {{selectedCategory.id}}</div>
-    <div>
-        <label for="category-name">Category name: </label>
-        <input id="category-name" [(ngModel)]="selectedCategory.name" placeholder="name">
-    </div>
-</div>

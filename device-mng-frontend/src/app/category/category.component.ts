@@ -8,7 +8,6 @@ import { CATEGORIES, Category } from './category';
   styleUrls: ['./category.component.css']
 })
 export class CategoryComponent implements OnInit {
-  selectedCategory?: Category;
   categories: Category[] = [];
 
   constructor(private categoryService: CategoryService) { }
@@ -20,9 +19,5 @@ export class CategoryComponent implements OnInit {
   getCategories(): void {
     this.categoryService.getCategories()
       .subscribe(categories => this.categories = categories);
-  }
-
-  onSelect(category: Category): void {
-    this.selectedCategory = category;
   }
 }
