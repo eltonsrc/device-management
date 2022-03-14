@@ -1,5 +1,5 @@
 <h2>Categories</h2>
-<ul class="categories">
+<ul class="list">
   <li *ngFor="let category of categories">
     <button [class.selected]="category === selectedCategory" type="button" (click)="onSelect(category)">
         <span class="badge">{{category.id}}</span> {{category.name}}
@@ -11,7 +11,7 @@
     <h2>{{selectedCategory.name | uppercase}} Details</h2>
     <div>id: {{selectedCategory.id}}</div>
     <div>
-        <label for="hero-name">Hero name: </label>
-        <input id="hero-name" [(ngModel)]="selectedCategory.name" placeholder="name">
+        <label for="category-name">Category name: </label>
+        <input id="category-name" [(ngModel)]="selectedCategory.name" placeholder="name">
     </div>
 </div>
