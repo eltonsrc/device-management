@@ -8,6 +8,8 @@ import { DeviceComponent } from './device/device.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CategoryShowComponent } from './category-show/category-show.component';
 import { CategoryCreateComponent } from './category-create/category-create.component';
+import { DeviceShowComponent } from './device-show/device-show.component';
+import { DeviceCreateComponent } from './device-create/device-create.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { CategoryCreateComponent } from './category-create/category-create.compo
     CategoryComponent,
     DeviceComponent,
     CategoryShowComponent,
-    CategoryCreateComponent
+    CategoryCreateComponent,
+    DeviceShowComponent,
+    DeviceCreateComponent
   ],
   imports: [
     BrowserModule,

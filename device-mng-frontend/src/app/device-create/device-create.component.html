@@ -1,0 +1,21 @@
+<div>
+    <h2>New device</h2>
+    <div class="form-group">
+        <label for="category">Category</label>
+        <select class="form-control" id="category"
+                required
+                [(ngModel)]="device.category" name="category"
+                #category="ngModel">
+          <option *ngFor="let category of categories" [value]="category">{{category.name}}</option>
+        </select>
+      </div>
+    <div>
+        <label for="device-color">Color: </label>
+        <input id="device-color" [(ngModel)]="device.color" placeholder="color">
+    </div>
+    <div>
+        <label for="device-partNumber">Part number: </label>
+        <input id="device-partNumber" [(ngModel)]="device.partNumber" placeholder="part number">
+    </div>
+    <button (click)="save()">Save</button>
+</div>

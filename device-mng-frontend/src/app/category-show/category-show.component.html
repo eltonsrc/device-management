@@ -1,8 +1,5 @@
 <div *ngIf="category">
-    <h2>{{category.name | uppercase}} Details</h2>
-    <div>id: {{category.id}}</div>
-    <div>
-        <label for="category-name">Category name: </label>
-        <input id="category-name" [(ngModel)]="category.name" placeholder="name">
-    </div>
+    <h2>Category details</h2>
+    <div>Id: {{category.id}}</div>
+    <div>Name: {{category.name}}</div>
 </div>

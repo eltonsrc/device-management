@@ -1,17 +1,9 @@
 <h2>Devices</h2>
+<a class="button" routerLink="/device">New</a>
 <ul class="list">
   <li *ngFor="let device of devices">
-    <button [class.selected]="device === selectedDevice" type="button" (click)="onSelect(device)">
+    <a routerLink="/device/{{device.id}}">
         <span class="badge">{{device.id}}</span> {{device.color}}
-    </button>
+    </a>
   </li>
 </ul>
-
-<div *ngIf="selectedDevice">
-    <h2>{{selectedDevice.color | uppercase}} Details</h2>
-    <div>id: {{selectedDevice.id}}</div>
-    <div>
-        <label for="device-name">Device part number: </label>
-        <input id="device-name" [(ngModel)]="selectedDevice.partNumber" placeholder="name">
-    </div>
-</div>

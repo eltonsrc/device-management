@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DeviceService } from '../device.service';
 import { Device, DEVICES } from './device';
 
 @Component({
@@ -7,16 +8,18 @@ import { Device, DEVICES } from './device';
   styleUrls: ['./device.component.css']
 })
 export class DeviceComponent implements OnInit {
-  selectedDevice?: Device;
-  devices = DEVICES;
+  devices?: Device[];
 
-  constructor() { }
+  constructor(
+    private deviceService: DeviceService
+  ) { }
 
   ngOnInit(): void {
+    this.getDevices();
   }
 
-  onSelect(device: Device): void {
-    this.selectedDevice = device;
+  getDevices(): void {
+    this.deviceService.getDevices()
+      .subscribe(devices => this.devices = devices);
   }
-
 }

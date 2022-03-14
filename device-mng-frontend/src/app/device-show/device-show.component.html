@@ -1,0 +1,7 @@
+<div *ngIf="device">
+    <h2>Device details</h2>
+    <div>Id: {{device.id}}</div>
+    <div>Category: <a routerLink="/category/{{device.category.id}}">{{device.category.name}}</a></div>
+    <div>Color: {{device.color}}</div>
+    <div>Part number: {{device.partNumber}}</div>
+</div>
