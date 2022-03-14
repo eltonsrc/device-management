@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { CategoryService } from '../category.service';
 import { Category } from '../category/category';
-import { DeviceService } from '../device.service';
+import { CategoryService } from '../category/category.service';
 import { Device } from '../device/device';
+import { DeviceService } from '../device/device.service';
 
 @Component({
   selector: 'app-device-create',

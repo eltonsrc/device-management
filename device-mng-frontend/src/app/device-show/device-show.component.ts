@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DeviceService } from '../device.service';
 import { Device } from '../device/device';
+import { DeviceService } from '../device/device.service';
 
 @Component({
   selector: 'app-device-show',

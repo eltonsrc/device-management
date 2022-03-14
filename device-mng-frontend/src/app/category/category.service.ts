@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { CATEGORIES, Category } from './category/category';
+import { CATEGORIES, Category } from './category';
 
 @Injectable({
   providedIn: 'root'
